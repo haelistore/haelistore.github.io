@@ -5,57 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Haeli — Organic Baby Essentials</title>
   <meta name="description" content="Haeli: Organic, safe, and stylish baby products. 1 product, 2 variations: Gray-White & Pink-Ecru. Coming soon!" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://haelistore.com/" />
   <meta property="og:title" content="Haeli — Organic Baby Essentials" />
   <meta property="og:description" content="Organic and stylish baby products. 1 product, 2 variations: Gray-White & Pink-Ecru." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://haelistore.com" />
   <meta property="og:image" content="/images/hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="/images/favicon.png" />
-  <link rel="canonical" href="https://haelistore.com/" />
   <meta name="theme-color" content="#ffffff" />
+
+  <!-- Favicon tries .png then .jpg -->
+  <link id="favicon" rel="icon" href="/images/favicon.png" />
+
   <style>
-    :root{--bg:#fafafa;--ink:#222;--muted:#6b7280;--ring:#e2e8f0}
-    *{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-    a{color:inherit;text-decoration:none}.container{max-width:1152px;margin:0 auto;padding:0 20px}
+    :root{--bg:#fafafa; --ink:#222; --muted:#6b7280; --ring:#e2e8f0; --soft:#f1f5f9}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1152px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;background:rgba(250,250,250,.85);backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--ring);z-index:20}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .logo{display:flex;gap:10px;align-items:center}.logo img{width:36px;height:36px;object-fit:contain;border-radius:10px}.logo span{font-weight:700}
-    .menu{display:flex;gap:18px}.menu a{font-size:14px;color:#6b7280}.menu a:hover{color:var(--ink)}
+    .logo{display:flex;gap:10px;align-items:center}.logo img{width:36px;height:36px;object-fit:contain;border-radius:10px}
+    .menu{display:flex;gap:18px}.menu a{font-size:14px;color:var(--muted)}.menu a:hover{color:var(--ink)}
     .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#111827;color:#fff;font-weight:600;font-size:14px}
-    .hero{padding:84px 0 48px;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .kicker{font-size:12px;color:#0ea5e9;letter-spacing:.18em;text-transform:uppercase;font-weight:700}h1{font-size:42px;line-height:1.1;margin:.4rem 0 1rem}
-    .lead{font-size:16px;color:#6b7280}.hero img{width:100%;border-radius:16px;box-shadow:0 10px 32px rgba(15,23,42,.12)}
-    .card{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:18px}.section{padding:56px 0}.section h2{font-size:28px;margin:0 0 16px}
-    .muted{color:#6b7280}.product{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
-    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--ring);background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:12px;color:#6b7280}
-    .variants{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}.variant{border:1px solid var(--ring);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px}
-    .swatch{width:16px;height:16px;border-radius:4px;border:1px solid #d1d5db}.swatch.gray{background:linear-gradient(45deg,#9ca3af 50%,#e5e7eb 50%)}.swatch.pink{background:linear-gradient(45deg,#f9a8d4 50%,#fdf2f8 50%)}
-    .bullets{display:grid;gap:8px;margin:16px 0}.bullets li{list-style:none;padding-left:22px;position:relative}.bullets li:before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border:2px solid #10b981;border-radius:50%}
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;border:1px solid var(--ring);cursor:pointer}
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50}.lightbox.open{display:flex}
-    .lightbox img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35)}.lightbox .close{position:fixed;top:18px;right:18px;background:#fff;border:none;border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:18px}
-    .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center}.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .contact-card{border:1px solid var(--ring);border-radius:14px;background:#fff;padding:16px}.contact-card b{display:block;margin-bottom:6px}
-    .form{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}.input{padding:10px 12px;border:1px solid var(--ring);border-radius:12px;font-size:14px;min-width:260px}
-    .input:focus{outline:none;border-color:#94a3b8;box-shadow:0 0 0 4px #e2e8f0}.note{font-size:12px;color:#6b7280}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    footer{padding:36px 0;border-top:1px solid var(--ring);color:#6b7280;font-size:14px}
-    @media (max-width:980px){.hero-grid,.product,.story{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(3,1fr)}.contact-cards{grid-template-columns:1fr}h1{font-size:34px}}
+
+    .hero{padding:84px 0 48px;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .kicker{font-size:12px;color:#0ea5e9;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+    h1{font-size:42px;line-height:1.1;margin:.4rem 0 1rem}
+    .lead{font-size:16px;color:var(--muted)}
+    .card{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:18px}
+    .section{padding:56px 0}.section h2{font-size:28px;margin:0 0 16px}
+    .muted{color:var(--muted)}
+    .product{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--ring);background:var(--soft);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .variants{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+    .variant{border:1px solid var(--ring);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px}
+    .swatch{width:16px;height:16px;border-radius:4px;border:1px solid #d1d5db}
+    .swatch.gray{background:linear-gradient(45deg,#9ca3af 50%, #e5e7eb 50%)}
+    .swatch.pink{background:linear-gradient(45deg,#f9a8d4 50%, #fdf2f8 50%)}
+
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;border:1px solid var(--ring);cursor:pointer}
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .close{position:fixed;top:18px;right:18px;background:#fff;border:none;border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:18px}
+
+    .contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .contact-card{border:1px solid var(--ring);border-radius:14px;background:#fff;padding:16px}
+    .form{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    .input{padding:10px 12px;border:1px solid var(--ring);border-radius:12px;font-size:14px;min-width:260px}
+    .input:focus{outline:none;border-color:#94a3b8;box-shadow:0 0 0 4px #e2e8f0}
+    .note{font-size:12px;color:var(--muted)}
+    footer{padding:36px 0;border-top:1px solid var(--ring);color:var(--muted);font-size:14px}
+
+    @media (max-width:980px){.hero-grid,.product{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(3,1fr)}h1{font-size:34px}}
     @media (max-width:640px){.gallery{grid-template-columns:repeat(2,1fr)}h1{font-size:28px}}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="logo" href="#top" aria-label="Haeli Homepage">
-        <img src="/images/logo.png" alt="Haeli" />
-        <span>Haeli</span>
-      </a>
+      <a class="logo" href="#top"><img id="logo" src="/images/logo.png" alt="Haeli" onerror="this.onerror=null;this.src='/images/8.jpg';" /><span>Haeli</span></a>
       <nav class="menu" aria-label="Main menu">
-        <a href="#product">Product</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#story">Story</a>
-        <a href="#contact">Contact</a>
+        <a href="#product">Product</a><a href="#gallery">Gallery</a><a href="#story">Story</a><a href="#contact">Contact</a>
       </nav>
       <a class="cta" href="#contact">Get in Touch</a>
     </div>
@@ -69,13 +85,14 @@
           <div class="kicker">Organic & Safe</div>
           <h1>Premium Baby Essentials — <br/>Soft, Stylish & Durable</h1>
           <p class="lead">Haeli offers baby products made with <b>organic, hypoallergenic</b> materials that moms can trust. Our first product is a <b>muslin crib rail cover set</b> — available in two elegant variations.</p>
-          <div style="display:flex; gap:10px; margin-top:16px">
+          <div style="display:flex;gap:10px;margin-top:16px">
             <a class="cta" href="#product">View Product</a>
             <a class="pill" href="#subscribe">Notify Me on Launch</a>
           </div>
         </div>
         <div>
-          <img src="/images/hero.jpg" alt="Haeli hero image" />
+          <!-- try .jpg then .png -->
+          <img src="/images/hero.jpg" alt="Haeli hero image" onerror="this.onerror=null;this.src='/images/hero.png';" style="width:100%;border-radius:16px;box-shadow:0 10px 32px rgba(15,23,42,.12)" />
         </div>
       </div>
     </section>
@@ -87,123 +104,7 @@
           <div class="pill">1 Product · 2 Variations</div>
           <h2>Muslin Crib Rail Cover Set</h2>
           <p class="muted">Set includes: 1 long (130×20 cm) + 2 short (70×20 cm). Soft fiber filling, reversible design.</p>
+
           <div class="variants" role="list" aria-label="Variations">
             <div class="variant" role="listitem"><span class="swatch gray" aria-hidden="true"></span> Gray · White</div>
-            <div class="variant" role="listitem"><span class="swatch pink" aria-hidden="true"></span> Pink · Ecru</div>
-          </div>
-          <ul class="bullets">
-            <li>Organic feel: breathable, soft, and gentle on baby’s skin.</li>
-            <li>Reversible design: two looks in one set.</li>
-            <li>Machine washable, durable stitching for long use.</li>
-            <li>Helps protect crib and furniture from teething damage.</li>
-          </ul>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="cta" href="#subscribe">Notify Me on Launch</a>
-            <a class="pill" href="#gallery">View All Images</a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/product-main.jpg" alt="Muslin crib rail cover set" style="width:100%; border-radius:16px; border:1px solid var(--ring)"/>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section" aria-labelledby="gallery-title">
-      <div class="container">
-        <h2 id="gallery-title">Gallery</h2>
-        <p class="muted" style="margin-top:-4px">Total of 10 images — close-ups, packaging, and lifestyle shots.</p>
-        <div class="gallery" id="gallery-grid">
-          <div class="gallery" id="gallery-grid">
-  <img src="/images/1.png" alt="Muslin crib rail cover detail 1" />
-  <img src="/images/2.png" alt="Muslin crib rail cover detail 2" />
-  <img src="/images/3.png" alt="Muslin crib rail cover detail 3" />
-  <img src="/images/4.png" alt="Lifestyle image 1" />
-  <img src="/images/5.png" alt="Lifestyle image 2" />
-  <img src="/images/6.png" alt="Packaging image 1" />
-  <img src="/images/7.png" alt="Packaging image 2" />
-  <img src="/images/8.jpg" alt="Fabric texture / bag" />
-  <img src="/images/9.png" alt="Detail" />
-  <img src="/images/10.png" alt="Colorways" />
-</div>
-
-        </div>
-      </div>
-      <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Enlarged image">
-        <button class="close" aria-label="Close" onclick="closeLightbox()">✕</button>
-        <img id="lightbox-img" src="" alt="Enlarged product image" />
-      </div>
-    </section>
-
-    <!-- SUBSCRIBE -->
-    <section id="subscribe" class="section">
-      <div class="container">
-        <h2>Be the first to know</h2>
-        <p class="muted">Leave your email and we’ll notify you when Haeli launches in the US.</p>
-        <form id="notify-form" class="form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
-          <label for="notify-email" class="sr-only">Email address</label>
-          <input id="notify-email" class="input" type="email" name="email" placeholder="you@example.com" required />
-          <button class="cta" type="submit">Notify Me</button>
-          <span id="notify-msg" class="note" role="status" aria-live="polite"></span>
-        </form>
-        <p class="note">We respect your privacy. No spam—unsubscribe anytime.</p>
-      </div>
-    </section>
-
-    <!-- STORY -->
-    <section id="story" class="section">
-      <div class="container story">
-        <div>
-          <img src="/images/story.jpg" alt="Brand story image" style="width:100%; border-radius:16px; border:1px solid var(--ring)"/>
-        </div>
-        <div class="card">
-          <h2>Our Story</h2>
-          <p>Haeli is a mom-founded brand that respects every baby’s delicate skin, blending nature and aesthetics into <b>safe, soft, and timeless</b> designs. Our products are crafted with breathable textures, strong stitching, and thoughtful packaging to bring peace of mind to parents.</p>
-          <p class="muted" style="margin-top:8px">Available soon on Amazon and our own store. Sign up to hear first.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-cards">
-          <div class="contact-card">
-            <b>Email</b>
-            <a href="mailto:haeli@haelistore.com">haeli@haelistore.com</a>
-            <p class="muted">For orders & partnerships.</p>
-          </div>
-          <div class="contact-card">
-            <b>Instagram</b>
-            <a href="https://instagram.com/haeli" target="_blank" rel="noopener">@haeli</a>
-            <p class="muted">Follow for updates & lifestyle images.</p>
-          </div>
-          <div class="contact-card">
-            <b>WhatsApp</b>
-            <a href="https://wa.me/905340241302" target="_blank" rel="noopener">Message Us</a>
-            <p class="muted">Quick questions answered fast.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container">© <span id="year"></span> Haeli · All Rights Reserved</div></footer>
-
-  <script>
-    const box=document.getElementById('lightbox');const boxImg=document.getElementById('lightbox-img');
-    document.getElementById('gallery-grid').addEventListener('click',(e)=>{if(e.target.tagName==='IMG'){boxImg.src=e.target.src;box.classList.add('open');box.setAttribute('aria-hidden','false')}})
-    function closeLightbox(){box.classList.remove('open');box.setAttribute('aria-hidden','true');boxImg.src=''}
-    box.addEventListener('click',(e)=>{if(e.target===box){closeLightbox()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){closeLightbox()}})
-    document.getElementById('year').textContent=(new Date()).getFullYear();
-
-    // Subscribe form (Formspree or mailto fallback)
-    (function(){const f=document.getElementById('notify-form');if(!f)return;const email=document.getElementById('notify-email');const msg=document.getElementById('notify-msg');
-      f.addEventListener('submit',async(e)=>{e.preventDefault();const v=(email.value||'').trim();if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(v)){msg.textContent='Please enter a valid email.';email.focus();return}
-      msg.textContent='Submitting…';try{let ok=false;if(!/REPLACE_WITH_YOUR_ID/.test(f.action)){const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});ok=r.ok}
-      if(!ok){const s=encodeURIComponent('Notify me about Haeli launch');const b=encodeURIComponent('Please notify me when Haeli launches. My email: '+v);location.href='mailto:haeli@haelistore.com?subject='+s+'&body='+b;ok=true}
-      msg.textContent=ok?'Thank you! We will be in touch.':'Something went wrong. Please try again.';if(ok)f.reset()}catch(_){msg.textContent='Something went wrong. Please try again.'}})})();
-  </script>
-</body>
-</html>
+            <div class="variant" role
